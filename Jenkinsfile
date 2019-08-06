@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'node:10.15.3'
             args ''
-            lable 'front-stage'
+            label 'front-stage'
             customWorkspace '/hanlight/front/stage'
         }
     }
