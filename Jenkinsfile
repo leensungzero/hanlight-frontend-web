@@ -1,6 +1,9 @@
 node {
-    tools {
-        nodejs 'nodejs'
+    agent {
+        docker {
+            image 'node:10.15.3'
+            args ''
+        }
     }
 
     stage('Clone repository') {
