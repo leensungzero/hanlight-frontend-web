@@ -4,6 +4,11 @@ pipeline {
             image 'node:10.15.3'
             args ''
         }
+        
+        node {
+            lable 'front-stage'
+            customWorkspace '/hanlight/front/stage'
+        }
     }
 
     stages {
