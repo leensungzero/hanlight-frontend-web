@@ -4,15 +4,17 @@ pipeline {
             image 'node:10.15.3'
             args ''
         }
-        
-        node {
-            lable 'front-stage'
-            customWorkspace '/hanlight/front/stage'
-        }
     }
 
     stages {
         stage('Clone repository') {
+            agent {
+                node {
+                    lable 'front-stage'
+                    customWorkspace '/hanlight/front/stage'
+                }
+            }
+            
             steps {
                 checkout scm
             }
