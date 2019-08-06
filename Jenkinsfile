@@ -1,4 +1,4 @@
-node {
+pipeline {
     agent {
         docker {
             image 'node:10.15.3'
